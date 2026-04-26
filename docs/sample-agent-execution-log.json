@@ -1,0 +1,583 @@
+{
+  "description": "Structured EvilTrace execution logs. Token usage is zero because the default submission path uses a deterministic no-paid-LLM agent to avoid paid APIs.",
+  "case_alpha": {
+    "id": "run-6aab020c30",
+    "case_id": "case_alpha",
+    "status": "completed",
+    "started_at": "2026-04-26T10:23:55.743360Z",
+    "completed_at": "2026-04-26T10:23:55.743360Z",
+    "steps": [
+      {
+        "index": 1,
+        "phase": "plan",
+        "action": "Create investigation plan",
+        "rationale": "Prioritize authentication anomalies, execution, persistence, and exfiltration with read-only tools.",
+        "tool": null,
+        "result_summary": null,
+        "evidence_refs": [],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 2,
+        "phase": "baseline",
+        "action": "Run event_count",
+        "rationale": "Establish case size and event distribution.",
+        "tool": "event_count",
+        "result_summary": "Loaded 14 events across 9 action types.",
+        "evidence_refs": [
+          "ev-001:L1:evt-0001",
+          "ev-001:L2:evt-0002",
+          "ev-001:L3:evt-0003"
+        ],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 3,
+        "phase": "auth-check",
+        "action": "Run suspicious_logins",
+        "rationale": "Known suspicious IPs can reveal initial access.",
+        "tool": "suspicious_logins",
+        "result_summary": "Found 2 login events tied to known suspicious IPs.",
+        "evidence_refs": [
+          "ev-001:L2:evt-0002",
+          "ev-001:L3:evt-0003"
+        ],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 4,
+        "phase": "auth-correlation",
+        "action": "Run impossible_travel",
+        "rationale": "Multi-country success patterns can confirm compromised accounts.",
+        "tool": "impossible_travel",
+        "result_summary": "Found 1 users with multi-country login success patterns.",
+        "evidence_refs": [
+          "ev-001:L3:evt-0003",
+          "ev-001:L4:evt-0004"
+        ],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 5,
+        "phase": "execution-check",
+        "action": "Run suspicious_commands",
+        "rationale": "Suspicious process launches can show hands-on-keyboard activity.",
+        "tool": "suspicious_commands",
+        "result_summary": "Found 3 suspicious command executions.",
+        "evidence_refs": [
+          "ev-001:L6:evt-0006",
+          "ev-001:L7:evt-0007",
+          "ev-001:L8:evt-0008"
+        ],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 6,
+        "phase": "persistence-check",
+        "action": "Run persistence_changes",
+        "rationale": "Persistence changes determine whether access survived reboot or logout.",
+        "tool": "persistence_changes",
+        "result_summary": "Found 2 persistence-related changes.",
+        "evidence_refs": [
+          "ev-001:L9:evt-0009",
+          "ev-001:L10:evt-0010"
+        ],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 7,
+        "phase": "exfil-check",
+        "action": "Run exfil_signals",
+        "rationale": "Archive/upload/DNS anomalies identify potential data theft.",
+        "tool": "exfil_signals",
+        "result_summary": "Found 3 possible exfiltration signals.",
+        "evidence_refs": [
+          "ev-001:L11:evt-0011",
+          "ev-001:L12:evt-0012",
+          "ev-001:L13:evt-0013"
+        ],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 8,
+        "phase": "analysis",
+        "action": "Draft findings",
+        "rationale": "Convert corroborated tool output into evidence-linked findings.",
+        "tool": null,
+        "result_summary": null,
+        "evidence_refs": [],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 9,
+        "phase": "self-correction",
+        "action": "Re-check exfiltration confidence",
+        "rationale": "The exfiltration claim has fewer independent evidence types than initial-access and persistence findings, so downgrade confidence and add caveat.",
+        "tool": "exfil_signals",
+        "result_summary": "Found 3 possible exfiltration signals.",
+        "evidence_refs": [
+          "ev-001:L11:evt-0011",
+          "ev-001:L12:evt-0012",
+          "ev-001:L13:evt-0013"
+        ],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 10,
+        "phase": "report",
+        "action": "Finalize report",
+        "rationale": "Emit only evidence-linked confirmed or caveated findings.",
+        "tool": null,
+        "result_summary": null,
+        "evidence_refs": [],
+        "created_at": "2026-04-26T10:23:55.743360Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "finding-initial-access",
+        "title": "Compromised account likely used for initial access",
+        "severity": "high",
+        "confidence": "confirmed",
+        "summary": "Suspicious IP login activity and impossible-travel correlation both point to the same user account.",
+        "evidence_refs": [
+          "ev-001:L2:evt-0002",
+          "ev-001:L3:evt-0003",
+          "ev-001:L4:evt-0004"
+        ],
+        "reasoning": [
+          "Found 2 login events tied to known suspicious IPs.",
+          "Found 1 users with multi-country login success patterns.",
+          "Two independent auth checks corroborate the account compromise hypothesis."
+        ],
+        "caveats": []
+      },
+      {
+        "id": "finding-execution-persistence",
+        "title": "Post-compromise execution and persistence were established",
+        "severity": "critical",
+        "confidence": "confirmed",
+        "summary": "Suspicious shell activity is followed by cron/service persistence indicators on the same host.",
+        "evidence_refs": [
+          "ev-001:L10:evt-0010",
+          "ev-001:L6:evt-0006",
+          "ev-001:L7:evt-0007",
+          "ev-001:L8:evt-0008",
+          "ev-001:L9:evt-0009"
+        ],
+        "reasoning": [
+          "Found 3 suspicious command executions.",
+          "Found 2 persistence-related changes.",
+          "Execution and persistence events occur after suspicious authentication."
+        ],
+        "caveats": []
+      },
+      {
+        "id": "finding-exfiltration",
+        "title": "Possible data exfiltration requires caveated reporting",
+        "severity": "medium",
+        "confidence": "medium",
+        "summary": "Archive and upload signals exist, but the agent initially overstates this as confirmed theft before correction.",
+        "evidence_refs": [
+          "ev-001:L11:evt-0011",
+          "ev-001:L12:evt-0012",
+          "ev-001:L13:evt-0013"
+        ],
+        "reasoning": [
+          "Found 3 possible exfiltration signals.",
+          "Data movement signals are suspicious but do not prove attacker-controlled receipt."
+        ],
+        "caveats": [
+          "No packet capture or destination ownership proof is present in the fixture.",
+          "Downgraded after self-check: archive/upload signals need corroborating destination evidence."
+        ]
+      }
+    ],
+    "corrections": [
+      {
+        "finding_id": "finding-exfiltration",
+        "before_confidence": "high",
+        "after_confidence": "medium",
+        "reason": "Evidence supports suspicious staging/upload behavior, but not confirmed attacker receipt.",
+        "evidence_refs": [
+          "ev-001:L11:evt-0011",
+          "ev-001:L12:evt-0012",
+          "ev-001:L13:evt-0013"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-001",
+        "path": "data/fixtures/case_alpha/events.jsonl",
+        "sha256": "8613b43715a68014b25ffe178f2af204c4f8f4c26bbdc28bbd8d50219a7bdb68",
+        "kind": "event-log",
+        "size": 2684,
+        "description": "Synthetic incident-response event stream for EvilTrace demo case."
+      },
+      {
+        "id": "ev-002",
+        "path": "data/fixtures/case_alpha/README.md",
+        "sha256": "f2b55b60a690aa5e2dae19e80dfacf6d3e2583278687da9f32cd02b5ba5b36fd",
+        "kind": "documentation",
+        "size": 537,
+        "description": "Fixture notes and safe-use documentation."
+      }
+    ],
+    "metrics": {
+      "total_steps": 10,
+      "total_findings": 3,
+      "total_corrections": 1,
+      "confirmed_findings": 2,
+      "evidence_refs": 11,
+      "paid_api_required": false
+    }
+  },
+  "sift_demo": {
+    "id": "run-51f12d56d8",
+    "case_id": "sift_demo",
+    "status": "completed",
+    "started_at": "2026-04-26T10:23:55.745913Z",
+    "completed_at": "2026-04-26T10:23:55.745913Z",
+    "steps": [
+      {
+        "index": 1,
+        "phase": "plan",
+        "action": "Create investigation plan",
+        "rationale": "Prioritize authentication anomalies, execution, persistence, and exfiltration with read-only tools.",
+        "tool": null,
+        "result_summary": null,
+        "evidence_refs": [],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 2,
+        "phase": "baseline",
+        "action": "Run event_count",
+        "rationale": "Establish case size and event distribution.",
+        "tool": "event_count",
+        "result_summary": "Loaded 9 events across 5 action types.",
+        "evidence_refs": [
+          "ev-001:L1:evt-0001",
+          "ev-001:L2:evt-0002",
+          "ev-001:L3:evt-0003"
+        ],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 3,
+        "phase": "auth-check",
+        "action": "Run suspicious_logins",
+        "rationale": "Known suspicious IPs can reveal initial access.",
+        "tool": "suspicious_logins",
+        "result_summary": "Found 1 login events tied to known suspicious IPs.",
+        "evidence_refs": [
+          "ev-001:L1:evt-0001"
+        ],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 4,
+        "phase": "auth-correlation",
+        "action": "Run impossible_travel",
+        "rationale": "Multi-country success patterns can confirm compromised accounts.",
+        "tool": "impossible_travel",
+        "result_summary": "Found 1 users with multi-country login success patterns.",
+        "evidence_refs": [
+          "ev-001:L1:evt-0001",
+          "ev-001:L2:evt-0002"
+        ],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 5,
+        "phase": "execution-check",
+        "action": "Run suspicious_commands",
+        "rationale": "Suspicious process launches can show hands-on-keyboard activity.",
+        "tool": "suspicious_commands",
+        "result_summary": "Found 3 suspicious command executions.",
+        "evidence_refs": [
+          "ev-001:L3:evt-0003",
+          "ev-001:L4:evt-0004",
+          "ev-001:L5:evt-0005"
+        ],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 6,
+        "phase": "persistence-check",
+        "action": "Run persistence_changes",
+        "rationale": "Persistence changes determine whether access survived reboot or logout.",
+        "tool": "persistence_changes",
+        "result_summary": "Found 2 persistence-related changes.",
+        "evidence_refs": [
+          "ev-001:L6:evt-0006",
+          "ev-001:L8:evt-0008"
+        ],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 7,
+        "phase": "exfil-check",
+        "action": "Run exfil_signals",
+        "rationale": "Archive/upload/DNS anomalies identify potential data theft.",
+        "tool": "exfil_signals",
+        "result_summary": "Found 2 possible exfiltration signals.",
+        "evidence_refs": [
+          "ev-001:L7:evt-0007",
+          "ev-001:L9:evt-0009"
+        ],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 8,
+        "phase": "analysis",
+        "action": "Draft findings",
+        "rationale": "Convert corroborated tool output into evidence-linked findings.",
+        "tool": null,
+        "result_summary": null,
+        "evidence_refs": [],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 9,
+        "phase": "self-correction",
+        "action": "Re-check exfiltration confidence",
+        "rationale": "The exfiltration claim has fewer independent evidence types than initial-access and persistence findings, so downgrade confidence and add caveat.",
+        "tool": "exfil_signals",
+        "result_summary": "Found 2 possible exfiltration signals.",
+        "evidence_refs": [
+          "ev-001:L7:evt-0007",
+          "ev-001:L9:evt-0009"
+        ],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      },
+      {
+        "index": 10,
+        "phase": "report",
+        "action": "Finalize report",
+        "rationale": "Emit only evidence-linked confirmed or caveated findings.",
+        "tool": null,
+        "result_summary": null,
+        "evidence_refs": [],
+        "created_at": "2026-04-26T10:23:55.745913Z",
+        "token_usage": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0,
+          "mode": "deterministic-no-llm"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "finding-initial-access",
+        "title": "Compromised account likely used for initial access",
+        "severity": "high",
+        "confidence": "confirmed",
+        "summary": "Suspicious IP login activity and impossible-travel correlation both point to the same user account.",
+        "evidence_refs": [
+          "ev-001:L1:evt-0001",
+          "ev-001:L2:evt-0002"
+        ],
+        "reasoning": [
+          "Found 1 login events tied to known suspicious IPs.",
+          "Found 1 users with multi-country login success patterns.",
+          "Two independent auth checks corroborate the account compromise hypothesis."
+        ],
+        "caveats": []
+      },
+      {
+        "id": "finding-execution-persistence",
+        "title": "Post-compromise execution and persistence were established",
+        "severity": "critical",
+        "confidence": "confirmed",
+        "summary": "Suspicious shell activity is followed by cron/service persistence indicators on the same host.",
+        "evidence_refs": [
+          "ev-001:L3:evt-0003",
+          "ev-001:L4:evt-0004",
+          "ev-001:L5:evt-0005",
+          "ev-001:L6:evt-0006",
+          "ev-001:L8:evt-0008"
+        ],
+        "reasoning": [
+          "Found 3 suspicious command executions.",
+          "Found 2 persistence-related changes.",
+          "Execution and persistence events occur after suspicious authentication."
+        ],
+        "caveats": []
+      },
+      {
+        "id": "finding-exfiltration",
+        "title": "Possible data exfiltration requires caveated reporting",
+        "severity": "medium",
+        "confidence": "medium",
+        "summary": "Archive and upload signals exist, but the agent initially overstates this as confirmed theft before correction.",
+        "evidence_refs": [
+          "ev-001:L7:evt-0007",
+          "ev-001:L9:evt-0009"
+        ],
+        "reasoning": [
+          "Found 2 possible exfiltration signals.",
+          "Data movement signals are suspicious but do not prove attacker-controlled receipt."
+        ],
+        "caveats": [
+          "No packet capture or destination ownership proof is present in the fixture.",
+          "Downgraded after self-check: archive/upload signals need corroborating destination evidence."
+        ]
+      }
+    ],
+    "corrections": [
+      {
+        "finding_id": "finding-exfiltration",
+        "before_confidence": "high",
+        "after_confidence": "medium",
+        "reason": "Evidence supports suspicious staging/upload behavior, but not confirmed attacker receipt.",
+        "evidence_refs": [
+          "ev-001:L7:evt-0007",
+          "ev-001:L9:evt-0009"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-001",
+        "path": "data/fixtures/sift_demo/events.jsonl",
+        "sha256": "cdbcdc6206666953c8c2c22a7da42d7f7326a53205308cbb4950d8c11255a728",
+        "kind": "event-log",
+        "size": 3620,
+        "description": "Synthetic incident-response event stream for EvilTrace demo case."
+      },
+      {
+        "id": "ev-002",
+        "path": "data/fixtures/sift_demo/README.md",
+        "sha256": "f44c68b1bfbf80814658233c685626999c5354dd429b5f9839e083d2c18daba8",
+        "kind": "documentation",
+        "size": 368,
+        "description": "Fixture notes and safe-use documentation."
+      }
+    ],
+    "metrics": {
+      "total_steps": 10,
+      "total_findings": 3,
+      "total_corrections": 1,
+      "confirmed_findings": 2,
+      "evidence_refs": 9,
+      "paid_api_required": false
+    }
+  }
+}

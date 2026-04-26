@@ -1,0 +1,666 @@
+{
+  "source": "https://findevil.devpost.com/resources",
+  "egnyteFolder": "https://sansorg.egnyte.com/fl/HhH7crTYT4JK",
+  "downloadUrlUsed": "https://sansorg.egnyte.com/dd/HhH7crTYT4JK/?entryId=643cb64f-9cbe-4f5c-80c4-1a34bb043672",
+  "selectedFile": "xp-tdungan-10.3.58.7.zip",
+  "entryId": "643cb64f-9cbe-4f5c-80c4-1a34bb043672",
+  "sizeBytes": 12061961109,
+  "sha256": "aec574308482daffaa9c85a585287183bd8605a7d797580bd439cf47ecccaa6f",
+  "localPath": "D:\\code\\devpost\\official-data\\xp-tdungan-10.3.58.7.zip",
+  "downloadedAt": "2026-04-26T11:01:14.536537+00:00",
+  "zipListingEntryCount": 85,
+  "zipListingFirstEntries": [
+    {
+      "filename": "xp-tdungan-memory/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2016,
+        9,
+        7,
+        20,
+        21,
+        54
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        46,
+        40
+      ]
+    },
+    {
+      "filename": "xp-tdungan-memory/baseline-memory/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2016,
+        9,
+        7,
+        20,
+        22,
+        48
+      ]
+    },
+    {
+      "filename": "xp-tdungan-memory/xp_tdungan.mans",
+      "compressSize": 93774848,
+      "fileSize": 93774848,
+      "dateTime": [
+        2016,
+        12,
+        6,
+        21,
+        52,
+        58
+      ]
+    },
+    {
+      "filename": "xp-tdungan-memory/xp-tdungan-memory-raw.001",
+      "compressSize": 2147483648,
+      "fileSize": 2147483648,
+      "dateTime": [
+        2016,
+        6,
+        11,
+        3,
+        1,
+        44
+      ]
+    },
+    {
+      "filename": "xp-tdungan-memory/xp-tdungan-memory-raw.txt",
+      "compressSize": 1333,
+      "fileSize": 1333,
+      "dateTime": [
+        2016,
+        6,
+        11,
+        3,
+        1,
+        44
+      ]
+    },
+    {
+      "filename": "xp-tdungan-memory/baseline-memory/XPSP3x86-baseline.img",
+      "compressSize": 2147483648,
+      "fileSize": 2147483648,
+      "dateTime": [
+        2016,
+        6,
+        11,
+        3,
+        1,
+        44
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        10
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/mbr/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/hashes/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/volatility/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/mbr/mbr.001",
+      "compressSize": 512,
+      "fileSize": 512,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/xp-tdungan-c-drive.E01",
+      "compressSize": 7035112594,
+      "fileSize": 7035112594,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        10
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/bulk-extractor/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        10
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/PEid-Signatues/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/xp-tdungan-c-drive.E01.txt",
+      "compressSize": 1842,
+      "fileSize": 1842,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        10
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/plaso.csv",
+      "compressSize": 32469837,
+      "fileSize": 32469837,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/",
+      "compressSize": 0,
+      "fileSize": 0,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/timeline.csv",
+      "compressSize": 26093181,
+      "fileSize": 26093181,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/hashes/WinXPSP3x86.txt",
+      "compressSize": 1109105,
+      "fileSize": 1109105,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/whitelist.txt",
+      "compressSize": 50,
+      "fileSize": 50,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/xp_tdungan.mans",
+      "compressSize": 91288576,
+      "fileSize": 91288576,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/timeliner.body",
+      "compressSize": 1100089,
+      "fileSize": 1100089,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/PEid-Signatues/userdb.txt",
+      "compressSize": 490624,
+      "fileSize": 490624,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/windows-tags.txt",
+      "compressSize": 2452,
+      "fileSize": 2452,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/volatility/timeliner.body",
+      "compressSize": 1100089,
+      "fileSize": 1100089,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/m-whitelist-1.0.txt",
+      "compressSize": 57304863,
+      "fileSize": 57304863,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/filter_windows.txt",
+      "compressSize": 4049,
+      "fileSize": 4049,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/volatility/zeus-apihooks.txt",
+      "compressSize": 382972,
+      "fileSize": 382972,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/xp-tdungan-plaso.dump",
+      "compressSize": 100721534,
+      "fileSize": 100721534,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/volatility/xp-tdungan-apihooks.txt",
+      "compressSize": 5111,
+      "fileSize": 5111,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/TIMELINE_COLOR_TEMPLATE.zip",
+      "compressSize": 1237935,
+      "fileSize": 1237935,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/TIMELINE_COLOR_TEMPLATE.xlsx",
+      "compressSize": 3049535,
+      "fileSize": 3049535,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/XP-TDUNGAN-TIMELINE-FINAL.xlsx",
+      "compressSize": 5557162,
+      "fileSize": 5557162,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/bulk-extractor/bulk-extractor-output.zip",
+      "compressSize": 315181697,
+      "fileSize": 315181697,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/timeline/LibreOffice-Howto-Supertimeline-Formatting.txt",
+      "compressSize": 227,
+      "fileSize": 227,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/0c7c902c-67f8-479c-9f44-4d985106365a.ioc",
+      "compressSize": 6123,
+      "fileSize": 6123,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/12a40bf7-4834-49b0-a419-6abb5fe2b291.ioc",
+      "compressSize": 60025,
+      "fileSize": 60025,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/2106f0d2-a260-4277-90ab-edd3455e31fa.ioc",
+      "compressSize": 19202,
+      "fileSize": 19202,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/26213db6-9d3b-4a39-abeb-73656acb913e.ioc",
+      "compressSize": 10330,
+      "fileSize": 10330,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/2bff223f-9e46-47a7-ac35-d35f8138a4c7.ioc",
+      "compressSize": 5473,
+      "fileSize": 5473,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/2fc55747-6822-41d2-bcc1-387fc1b2e67b.ioc",
+      "compressSize": 8092,
+      "fileSize": 8092,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/32b168e6-dbd6-4d56-ba2f-734553239efe.ioc",
+      "compressSize": 7549,
+      "fileSize": 7549,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/3433dad8-879e-40d9-98b3-92ddc75f0dcd.ioc",
+      "compressSize": 8417,
+      "fileSize": 8417,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/3e01b786-fe3a-4228-95fa-c3986e2353d6.ioc",
+      "compressSize": 4006,
+      "fileSize": 4006,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/4a2c5f60-f4c0-4844-ba1f-a14dac9fa36c.ioc",
+      "compressSize": 6845,
+      "fileSize": 6845,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/4d1ced5f-fe47-4ba4-be0e-81d547f3aa8a.ioc",
+      "compressSize": 8710,
+      "fileSize": 8710,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    },
+    {
+      "filename": "xp-tdungan-c-drive/precooked/redline/APT1 - IOCS/5477b392-e565-45c5-9cb4-f561d6daeddc.ioc",
+      "compressSize": 5718,
+      "fileSize": 5718,
+      "dateTime": [
+        2017,
+        6,
+        1,
+        3,
+        48,
+        18
+      ]
+    }
+  ],
+  "gitPolicy": "Raw official case zip is gitignored because it is 11.23GB; commit only this manifest and derived reports/logs.",
+  "reason": "Smallest SRL-2015 official starter case zip visible in public Egnyte folder."
+}

@@ -1,0 +1,14 @@
+{
+  "name": "eviltrace-readonly-tools",
+  "architecture_pattern": "custom-mcp-style-typed-tool-server",
+  "security_boundary": "The agent can call only typed read-only functions. No shell execution or evidence mutation function is exposed.",
+  "tools": [
+    {"name": "inventory_case", "mutates_evidence": false, "description": "Return immutable evidence metadata and SHA-256 hashes."},
+    {"name": "event_count", "mutates_evidence": false, "description": "Return event counts by action type."},
+    {"name": "suspicious_logins", "mutates_evidence": false, "description": "Return suspicious login events."},
+    {"name": "impossible_travel", "mutates_evidence": false, "description": "Return same-user multi-country login patterns."},
+    {"name": "suspicious_commands", "mutates_evidence": false, "description": "Return suspicious process execution events."},
+    {"name": "persistence_changes", "mutates_evidence": false, "description": "Return persistence-related changes."},
+    {"name": "exfil_signals", "mutates_evidence": false, "description": "Return possible exfiltration signals."}
+  ]
+}

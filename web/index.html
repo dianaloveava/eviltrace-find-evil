@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EvilTrace | Self-correcting IR agent workbench</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand"><span class="logo">ET</span> EvilTrace</div>
+        <div class="nav-links">
+          <a href="#timeline">Timeline</a>
+          <a href="#findings">Findings</a>
+          <a href="#evidence">Evidence</a>
+          <a href="/api/runs/latest/report.md" target="_blank" rel="noreferrer">Report</a>
+        </div>
+      </nav>
+      <section class="hero-grid">
+        <div>
+          <p class="eyebrow">FIND EVIL! submission prototype</p>
+          <h1>Trace every autonomous IR claim back to evidence.</h1>
+          <p class="lede">
+            EvilTrace is a free, local-first incident-response agent workbench. It runs bounded read-only checks,
+            records its tool trail, catches weak claims, and exports an evidence-linked report for judges.
+          </p>
+          <div class="actions">
+            <button id="runButton">Run demo investigation</button>
+            <button id="loadButton" class="secondary">Load latest run</button>
+          </div>
+          <p id="status" class="status">Ready. Default demo uses synthetic fixtures and no paid APIs.</p>
+        </div>
+        <aside class="scorecard" aria-label="Run metrics">
+          <div><span id="metricFindings">-</span><small>findings</small></div>
+          <div><span id="metricCorrections">-</span><small>corrections</small></div>
+          <div><span id="metricEvidence">-</span><small>evidence refs</small></div>
+          <div><span id="metricPaid">No</span><small>paid API</small></div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="panel" id="findings">
+        <div class="section-title">
+          <p class="eyebrow">IR accuracy</p>
+          <h2>Evidence-linked findings</h2>
+        </div>
+        <div id="findingsList" class="cards empty">No run loaded yet.</div>
+      </section>
+
+      <section class="panel split" id="timeline">
+        <div>
+          <div class="section-title">
+            <p class="eyebrow">Autonomous execution</p>
+            <h2>Agent timeline</h2>
+          </div>
+          <ol id="timelineList" class="timeline empty"><li>No run loaded yet.</li></ol>
+        </div>
+        <div>
+          <div class="section-title">
+            <p class="eyebrow">Self-correction</p>
+            <h2>Corrections</h2>
+          </div>
+          <div id="correctionsList" class="corrections empty">No corrections loaded yet.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="evidence">
+        <div class="section-title">
+          <p class="eyebrow">Audit trail</p>
+          <h2>Evidence inventory</h2>
+        </div>
+        <div id="evidenceList" class="evidence-grid empty">No evidence loaded yet.</div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>Boundary:</strong> EvilTrace never performs Devpost registration, legal attestations, payout/tax forms,
+      or final submission clicks. Those remain user-owned.
+    </footer>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

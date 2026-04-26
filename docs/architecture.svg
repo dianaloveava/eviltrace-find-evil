@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-label="EvilTrace architecture diagram">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#66f2b3"/><stop offset="1" stop-color="#69c8ff"/></linearGradient>
+    <style>
+      .bg{fill:#071014}.box{fill:#0d1b22;stroke:#31515b;stroke-width:2;rx:18}.trust{fill:#102934;stroke:#66f2b3;stroke-width:3;stroke-dasharray:10 8;rx:22}.txt{font:600 22px Segoe UI,Arial;fill:#eff9fb}.small{font:16px Segoe UI,Arial;fill:#b7d2d8}.tiny{font:13px Consolas,monospace;fill:#9fc0c8}.arrow{stroke:#69c8ff;stroke-width:3;fill:none;marker-end:url(#arrow)}.guard{stroke:#66f2b3;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 z" fill="#69c8ff"/></marker>
+  </defs>
+  <rect class="bg" width="1280" height="760"/>
+  <text x="54" y="58" class="txt" font-size="32">EvilTrace Architecture ? Custom MCP-style Typed Tool Boundary</text>
+  <text x="54" y="88" class="small">Pattern: Custom typed read-only tool server + bounded self-correcting single agent. Architectural guardrails enforce evidence integrity.</text>
+
+  <rect x="54" y="132" width="318" height="500" class="trust"/>
+  <text x="78" y="172" class="txt">Evidence boundary</text>
+  <text x="78" y="202" class="small">Original data is never modified</text>
+
+  <rect x="90" y="238" width="245" height="82" class="box"/>
+  <text x="112" y="272" class="txt">SIFT / DFIR exports</text>
+  <text x="112" y="299" class="tiny">Plaso CSV ? Volatility JSON ? TSK bodyfile</text>
+
+  <rect x="90" y="370" width="245" height="86" class="box"/>
+  <text x="112" y="405" class="txt">Normalizer</text>
+  <text x="112" y="432" class="tiny">eviltrace.importers ? events.jsonl</text>
+
+  <rect x="90" y="506" width="245" height="80" class="box"/>
+  <text x="112" y="540" class="txt">Evidence inventory</text>
+  <text x="112" y="567" class="tiny">SHA-256 ? source refs ? line refs</text>
+
+  <path d="M213 320 L213 370" class="guard"/>
+  <path d="M213 456 L213 506" class="guard"/>
+
+  <rect x="460" y="150" width="295" height="118" class="box"/>
+  <text x="485" y="188" class="txt">Read-only tool server</text>
+  <text x="485" y="216" class="tiny">eviltrace.tool_server</text>
+  <text x="485" y="240" class="tiny">Typed functions only; no shell/destructive APIs</text>
+
+  <rect x="460" y="330" width="295" height="132" class="box"/>
+  <text x="485" y="368" class="txt">Bounded IR agent</text>
+  <text x="485" y="396" class="tiny">max steps ? deterministic no-paid-LLM default</text>
+  <text x="485" y="420" class="tiny">plans ? tools ? findings ? self-check</text>
+  <text x="485" y="444" class="tiny">prompt guardrails are secondary only</text>
+
+  <rect x="460" y="530" width="295" height="100" class="box"/>
+  <text x="485" y="568" class="txt">Structured run log</text>
+  <text x="485" y="596" class="tiny">timestamps ? tool calls ? token usage ? refs</text>
+
+  <path d="M335 546 C390 546 394 208 460 208" class="arrow"/>
+  <path d="M608 268 L608 330" class="arrow"/>
+  <path d="M608 462 L608 530" class="arrow"/>
+
+  <rect x="852" y="150" width="310" height="96" class="box"/>
+  <text x="878" y="188" class="txt">Self-correction</text>
+  <text x="878" y="216" class="tiny">downgrade weak claims ? flag caveats</text>
+
+  <rect x="852" y="310" width="310" height="112" class="box"/>
+  <text x="878" y="348" class="txt">Dashboard + report</text>
+  <text x="878" y="376" class="tiny">timeline ? evidence ? findings ? corrections</text>
+  <text x="878" y="400" class="tiny">Markdown/JSON export for judges</text>
+
+  <rect x="852" y="500" width="310" height="110" class="box"/>
+  <text x="878" y="538" class="txt">Submission artifacts</text>
+  <text x="878" y="566" class="tiny">README ? dataset docs ? accuracy report</text>
+  <text x="878" y="590" class="tiny">demo script ? execution logs ? SVG diagram</text>
+
+  <path d="M755 396 C805 396 810 198 852 198" class="arrow"/>
+  <path d="M1007 246 L1007 310" class="arrow"/>
+  <path d="M755 580 C800 580 806 366 852 366" class="arrow"/>
+  <path d="M1007 422 L1007 500" class="arrow"/>
+
+  <text x="54" y="698" class="small">Security boundary: only the typed tool server can read normalized evidence. No destructive command surface is exposed to the agent.</text>
+  <text x="54" y="724" class="small">Prompt guardrails: docs instruct read-only behavior, but architectural guardrails enforce it by omitting write/destructive tools.</text>
+</svg>

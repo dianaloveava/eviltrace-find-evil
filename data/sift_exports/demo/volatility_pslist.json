@@ -1,0 +1,4 @@
+[
+  {"timestamp":"2026-04-20T08:09:20Z","source":"volatility","host":"workstation-7","user":"morgan","process_name":"powershell.exe","command":"powershell -enc SQBFAFgA..."},
+  {"timestamp":"2026-04-20T08:10:45Z","source":"volatility","host":"workstation-7","user":"morgan","process_name":"payload.sh","command":"chmod +x /tmp/payload.sh && /tmp/payload.sh"}
+]
