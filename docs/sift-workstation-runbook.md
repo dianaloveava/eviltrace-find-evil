@@ -1,6 +1,8 @@
-# SIFT Workstation Runbook
+# SIFT Workstation / Protocol SIFT Strict Runbook
 
 The FIND EVIL! resources page recommends SANS SIFT Workstation and Protocol SIFT. EvilTrace is designed to run in a Linux terminal on SIFT with Python 3.12+.
+
+This runbook is strict: synthetic data, unofficial public data, and SIFT-like exports are useful for local tests, but they are not substitutes for the official SIFT / Protocol SIFT / starter-resource path in the final FIND EVIL submission.
 
 ## 1. Prepare SIFT
 
@@ -15,6 +17,8 @@ Install Protocol SIFT as instructed by the challenge resources:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/teamdfir/protocol-sift/main/install.sh | bash
 ```
+
+If the SIFT Workstation download, Slack, Devpost, or SANS flow requires login, terms acceptance, or eligibility confirmation, stop and let the entrant complete that official action personally.
 
 ## 2. Run EvilTrace locally
 
@@ -45,17 +49,23 @@ Supported dependency-free import shapes:
 - Sleuth Kit bodyfile text.
 - Generic JSON/JSONL event exports.
 
-## 4. Read-only typed tool boundary
+## 4. MCP read-only typed tool boundary
 
-Inspect the MCP-style typed tool manifest:
+Inspect the MCP stdio JSON-RPC tool boundary:
+
+```bash
+printf '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05"}}\n{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}\n' | python -m eviltrace.mcp_server
+```
+
+Inspect the legacy CLI manifest:
 
 ```bash
 python -m eviltrace.tool_server --manifest
 python -m eviltrace.tool_server --case sift_demo --call suspicious_commands
 ```
 
-The agent receives only typed read-only functions; it does not receive a generic shell execution surface.
+The agent receives only typed read-only functions; it does not receive a generic shell execution surface in the EvilTrace MCP boundary.
 
 ## Final submission caveat
 
-For the strongest FIND EVIL! submission, run this on the official starter case data from the challenge resources and include the resulting report/logs. The repository includes a small synthetic SIFT-export bundle so judges can try the workflow quickly without downloading large images.
+For strict FIND EVIL completion, run this on official starter resources through SIFT Workstation / Protocol SIFT and include the resulting report/logs. The repository includes a small synthetic SIFT-export bundle only for quick local workflow checks; it must not be represented as the final real-case demo evidence.

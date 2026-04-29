@@ -4,6 +4,7 @@
 - Planning mode: ralplan-style non-interactive consensus summary
 - Source spec: prior deep-interview planning session; runtime `.omx/` state is intentionally gitignored
 - Created: 2026-04-26T09:36:41.861Z
+- Strict update: 2026-04-29 user directive supersedes free-first / substitute-data assumptions. Paid LLM APIs are allowed when user-provided and documented. Strict official completion must use the official SIFT Workstation / Protocol SIFT / starter-resource path, not unofficial substitute data.
 - Target hackathon: FIND EVIL! (https://findevil.devpost.com/)
 - Backup candidates: Build with MeDo (https://medo.devpost.com/), Splunk Agentic Ops (https://splunk.devpost.com/)
 

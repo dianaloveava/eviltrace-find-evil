@@ -1,7 +1,10 @@
 {
   "name": "eviltrace-readonly-tools",
-  "architecture_pattern": "custom-mcp-style-typed-tool-server",
-  "security_boundary": "The agent can call only typed read-only functions. No shell execution or evidence mutation function is exposed.",
+  "architecture_pattern": "custom-mcp-stdio-json-rpc-server",
+  "mcp_entrypoint": "python -m eviltrace.mcp_server",
+  "legacy_cli_entrypoint": "python -m eviltrace.tool_server",
+  "protocol_methods": ["initialize", "notifications/initialized", "tools/list", "tools/call"],
+  "security_boundary": "The MCP client can call only typed read-only functions. No shell execution or evidence mutation function is exposed.",
   "tools": [
     {"name": "inventory_case", "mutates_evidence": false, "description": "Return immutable evidence metadata and SHA-256 hashes."},
     {"name": "event_count", "mutates_evidence": false, "description": "Return event counts by action type."},

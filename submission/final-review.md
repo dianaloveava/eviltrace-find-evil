@@ -1,5 +1,7 @@
 # Final Review Before Devpost Submit
 
+Strict status: this repository is **not yet final-submit complete**. It remains blocked on user-owned official steps and a verified SIFT Workstation / Protocol SIFT run against official starter resources.
+
 ## Local artifacts ready
 
 - [x] Working app
@@ -8,12 +10,12 @@
 - [x] README
 - [x] MIT license
 - [x] Architecture diagram SVG
-- [x] Devpost story draft
-- [x] Dataset documentation
-- [x] Accuracy report
-- [x] Agent execution logs
+- [x] Devpost story draft for prototype
+- [x] Dataset documentation for prototype data
+- [x] Accuracy report for prototype data
+- [x] Prototype agent execution logs
 - [x] SIFT/DFIR import path
-- [x] MCP-style typed read-only tool server
+- [x] MCP stdio JSON-RPC typed read-only tool server
 - [x] Dashboard screenshot
 - [x] Tests passing
 
@@ -22,9 +24,10 @@
 - [x] Create/push public GitHub repository: https://github.com/dianaloveava/eviltrace-find-evil
 - [ ] Register/join FIND EVIL! on Devpost.
 - [ ] Confirm legal eligibility.
-- [ ] Record a 5-minute max demo video using `docs/demo-script.md`.
+- [ ] Record a 5-minute max demo video using official real case data and `docs/demo-script.md`.
 - [ ] Upload demo video and paste URL into Devpost.
-- [x] Download official starter case zip locally and record checksum manifest; optional full SIFT analysis/report still recommended.
+- [ ] Download official starter resources through the official path if needed and run SIFT Workstation / Protocol SIFT analysis.
+- [ ] Add official real-case report, execution logs, and accuracy notes.
 - [ ] Review all generated text for your own claims before submitting.
 - [ ] Click final Submit on Devpost personally.
 

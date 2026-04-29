@@ -4,7 +4,7 @@
 
 Security teams increasingly want autonomous investigation helpers, but black-box agents are hard to trust. A useful defender agent should not just produce a confident answer; it should show the evidence trail, expose uncertainty, and correct itself when a claim is weak.
 
-## What it does
+## What it does in the current prototype
 
 EvilTrace runs a safe, synthetic incident-response case through a bounded autonomous workflow. It inventories evidence, runs read-only checks, correlates suspicious login, execution, persistence, and exfiltration signals, then exports a transparent report. The dashboard lets judges inspect every agent step, every evidence reference, and the self-correction that downgrades an overconfident exfiltration claim.
 
@@ -20,13 +20,13 @@ EvilTrace runs a safe, synthetic incident-response case through a bounded autono
 
 The biggest challenge was balancing autonomy with trust. EvilTrace intentionally refuses to treat suspicious upload signals as confirmed theft without destination corroboration. That self-correction makes the demo more credible than a system that simply maximizes confidence.
 
-## Accomplishments
+## Prototype accomplishments
 
-- Full-stack app with no required paid services.
-- Complete autonomous investigation run.
+- Full-stack app with no required paid services for the deterministic local path.
+- Complete prototype autonomous investigation run.
 - Evidence-linked findings and correction trail.
 - Reproducible synthetic fixture and test suite.
-- Submission-ready architecture and demo materials.
+- Strict compliance tracker for remaining official SIFT / Protocol SIFT / real-case submission blockers.
 
 ## What we learned
 
@@ -34,9 +34,11 @@ Autonomous security agents need auditability as a first-class feature. The best 
 
 ## What's next
 
-- Add optional SIFT / Protocol SIFT adapters.
+- Run and document the workflow inside SIFT Workstation with Protocol SIFT installed.
+- Analyze official FIND EVIL starter resources and add the resulting official real-case report/logs.
+- Record the final demo video from the official real-case terminal run.
 - Add more benchmark fixtures.
-- Add local LLM summarization that never overrides deterministic evidence decisions.
+- Add configurable LLM summarization via user-provided API URL/key with token usage logging.
 - Add richer evidence graph visualization.
 
 ## Built with

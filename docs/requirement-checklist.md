@@ -1,16 +1,16 @@
 # FIND EVIL! Requirement Checklist
 
-Status legend: Complete / Local-ready / User-owned / Remaining finalization
+Status legend: Complete / Prototype-ready / User-owned / Blocked / Remaining finalization
 
 | Requirement | Status | Evidence |
 | --- | --- | --- |
 | Public code repository + MIT/Apache license | Complete after push | `LICENSE`, full code tree, public repository: https://github.com/dianaloveava/eviltrace-find-evil. |
-| Demo video max 5 minutes | Local-ready script; user-owned recording/upload remains | `docs/demo-script.md`; screenshot at `docs/screenshots/eviltrace-dashboard.png`. |
-| Architecture diagram | Complete | `docs/architecture.svg`, `docs/architecture.md`. |
-| Written project description | Complete | `docs/devpost-story.md`, `submission/devpost-form.md`. |
-| Dataset documentation | Complete for included demo data; official starter data downloaded/checksummed locally | `docs/dataset-documentation.md`, `docs/official-starter-data-manifest.json`. |
-| Accuracy report | Complete for included demo data; final can add official data run | `docs/accuracy-report.md`, `docs/sample-report.md`, `docs/sift-demo-report.md`. |
-| Try-it-out instructions on SIFT Workstation | Complete locally; SIFT VM full official-case validation recommended | `docs/sift-workstation-runbook.md`, `README.md`, `start-eviltrace.sh`. |
-| Agent execution logs with timestamps/token usage | Complete | `docs/sample-agent-execution-log.json`; token usage is zero for deterministic no-LLM path. |
-| Improve Protocol SIFT / autonomous IR agent | Local-ready MVP | SIFT/DFIR importers, MCP-style read-only tool server, bounded self-correcting agent. |
+| Demo video max 5 minutes | Blocked / user-owned | Must record official live terminal execution against official real case data and show self-correction. Prototype script exists at `docs/demo-script.md`. |
+| Architecture diagram | Prototype-ready; strict update needed after official run | `docs/architecture.svg`, `docs/architecture.md`. |
+| Written project description | Prototype-ready; strict update needed after official run | `docs/devpost-story.md`, `submission/devpost-form.md`. |
+| Dataset documentation | Partial | Included demo data is documented; strict final requires official starter-resource analysis artifacts. Manifest exists at `docs/official-starter-data-manifest.json`. |
+| Accuracy report | Partial | Current report covers prototype data only; strict final requires official case false positives / misses / hallucination / spoliation discussion. |
+| Try-it-out instructions on SIFT Workstation | Partial | `docs/sift-workstation-runbook.md`; strict final requires actual SIFT Workstation / Protocol SIFT validation. |
+| Agent execution logs with timestamps/token usage | Partial | Prototype log exists; strict final requires logs from official real case run and any LLM token usage if enabled. |
+| Improve Protocol SIFT / autonomous IR agent | In progress | SIFT/DFIR importers, MCP stdio read-only server, bounded self-correcting agent. Strict final requires Protocol SIFT / official starter-resource run evidence. |
 | User handles Devpost/legal/final submit | User-owned | `docs/submission-checklist.md`. |

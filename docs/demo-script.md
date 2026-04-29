@@ -1,5 +1,7 @@
 # EvilTrace Demo Script
 
+Strict official note: this script is a prototype walkthrough. The final FIND EVIL video must be re-recorded from a live terminal run against official real case data through the SIFT Workstation / Protocol SIFT path, and it must show at least one self-correction sequence.
+
 Target length: 4-5 minutes.
 
 ## Shot 1: Problem framing (20s)
@@ -12,10 +14,10 @@ Run:
 python -m eviltrace.server
 ```
 
-Open the dashboard and point out that the demo uses synthetic fixtures and no paid APIs.
+Open the dashboard and point out that this prototype walkthrough uses synthetic fixtures. For the strict official video, replace this with the official real-case SIFT / Protocol SIFT run.
 
 ## Shot 3: Run investigation (60s)
-Click **Run demo investigation**. Show metrics: findings, corrections, evidence refs, no paid API.
+Click **Run demo investigation**. Show metrics: findings, corrections, and evidence refs.
 
 ## Shot 4: Timeline (60s)
 Walk through plan, baseline, auth checks, suspicious commands, persistence, exfiltration checks, and final report step.

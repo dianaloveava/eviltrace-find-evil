@@ -35,7 +35,7 @@
 
 ## Evidence integrity approach
 
-Architectural guardrail: the agent calls only typed read-only tools from `eviltrace.tool_server` / `ReadOnlyToolbox`. No destructive shell command or write-to-evidence function is exposed.
+Architectural guardrail: the agent calls only typed read-only tools from the MCP stdio JSON-RPC server in `eviltrace.mcp_server`, the legacy CLI wrapper in `eviltrace.tool_server`, and `ReadOnlyToolbox`. No destructive shell command or write-to-evidence function is exposed through that boundary.
 
 Prompt guardrail: documentation instructs read-only analysis, but the key protection is architectural: the callable tool surface cannot mutate original evidence.
 
@@ -49,4 +49,4 @@ Spoliation test status:
 
 - Official FIND EVIL! starter case data has not been vendored or fully benchmarked in this repository.
 - The SIFT demo bundle is intentionally small and synthetic.
-- The current custom tool server is MCP-style/typed, not a certified full MCP protocol implementation.
+- The current MCP server implements the standard stdio JSON-RPC method surface used by MCP clients for `initialize`, `tools/list`, and `tools/call`; strict final validation should still include the client used in the official demo environment.

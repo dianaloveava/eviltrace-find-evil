@@ -11,6 +11,7 @@ from eviltrace.server import ThreadingHTTPServer, EvilTraceHandler
 from eviltrace.tools import ReadOnlyToolbox
 
 from eviltrace.importers import normalize_sift_exports
+from eviltrace.mcp_server import handle_request, list_tools
 from eviltrace.tool_server import call_tool
 
 
@@ -93,6 +94,38 @@ class SiftImportTests(unittest.TestCase):
         self.assertGreaterEqual(len(result['evidence_refs']), 1)
         inventory = call_tool('inventory_case', 'sift_demo_test')
         self.assertGreaterEqual(len(inventory['evidence']), 1)
+
+
+class McpServerTests(unittest.TestCase):
+    def test_mcp_initialize_and_list_tools(self):
+        init_response = handle_request({
+            'jsonrpc': '2.0',
+            'id': 1,
+            'method': 'initialize',
+            'params': {'protocolVersion': '2024-11-05'},
+        })
+        self.assertEqual(init_response['result']['serverInfo']['name'], 'eviltrace-readonly-mcp')
+        self.assertIn('tools', init_response['result']['capabilities'])
+
+        tools = list_tools()
+        names = {tool['name'] for tool in tools}
+        self.assertIn('inventory_case', names)
+        self.assertIn('suspicious_commands', names)
+        self.assertTrue(all('inputSchema' in tool for tool in tools))
+
+    def test_mcp_tools_call_returns_structured_content(self):
+        response = handle_request({
+            'jsonrpc': '2.0',
+            'id': 2,
+            'method': 'tools/call',
+            'params': {
+                'name': 'suspicious_commands',
+                'arguments': {'case_id': 'case_alpha'},
+            },
+        })
+        self.assertFalse(response['result']['isError'])
+        self.assertIn('structuredContent', response['result'])
+        self.assertGreaterEqual(len(response['result']['structuredContent']['evidence_refs']), 1)
 
 
 if __name__ == '__main__':
